@@ -8,7 +8,8 @@ from langchain.chains import ConversationChain
 st.set_page_config(page_title="Personalized AI Assistant", page_icon="🤖", layout="centered")
 st.markdown("<h1 style='text-align: center;'>💬 Personalized AI Assistant</h1>", unsafe_allow_html=True)
 
-# --- API Key --- # move this to st.secrets or env in production
+# --- API Key ---
+api_key = st.secrets["CHATGROQ_API_KEY"] # move this to st.secrets or env in production
 
 # --- Session State ---
 if "chat_history" not in st.session_state:
